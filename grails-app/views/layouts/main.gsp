@@ -58,6 +58,13 @@
               $("#myModal .modal-body").load("${createLink(controller: 'profile', action: 'login')}");
               $('#myModal').modal('show');
       });
+      
+      // Click connectRequest shows modal
+      $("#connectRequest").die("click").live("click", function () {  
+              $("#myModal .modal-header").html('<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button><h3 id="myModalLabel">Connection Requests</h3>');
+              $("#myModal .modal-body").load("${createLink(controller: 'profile', action: 'connect')}");
+              $('#myModal').modal('show');
+      });
 
       $('#myModal').on('hidden', function () {
           // clear html from modal
@@ -99,8 +106,8 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">People <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li class="nav-header">Contacts</li>
-                  <li><a href="${createLink(controller: 'mailbox', action: 'show', id: session?.profileInstance?.mailboxId )}">Messages</a></li>
                   <li><a href="#">Show All</a></li>
+                  <li><a id="connectRequest">Requests</a></li>
                 </ul>
               </li>
 

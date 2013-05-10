@@ -40,6 +40,10 @@ class ProfileController {
     def login(){
     }
     
+    def connect() {
+        
+    }
+    
     def logout() {
         //Teardown session then redirect back to login page
         flash.message = "Goodbye ${session?.user?.firstName}"
