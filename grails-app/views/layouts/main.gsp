@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
-    <link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.css')}" type="text/css">
+    <link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.min.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'js', file: 'jquery/css/ui-lightness/jquery-ui-1.9.2.custom.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'js', file: 'datatable/media/css/demo_page.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'js', file: 'datatable/media/css/demo_table.css')}" type="text/css">
@@ -103,7 +103,7 @@
               </li>
 
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">People <b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge badge-info">3</span>People <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li class="nav-header">Contacts</li>
                   <li><a href="#">Show All</a></li>
