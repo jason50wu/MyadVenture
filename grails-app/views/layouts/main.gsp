@@ -22,9 +22,9 @@
     <link rel="stylesheet" href="${resource(dir: 'js', file: 'datatable/media/css/demo_page.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'js', file: 'datatable/media/css/demo_table.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'js', file: 'jquery/css/autoSuggest.css')}" type="text/css">
-      <!-- <link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap-responsive.css')}" type="text/css"> -->
-
-    <script src="http://maps.google.com/maps/api/js?sensor=false"/>
+    <link rel='stylesheet' href="${resource(dir: 'js', file: 'datatable/media/css/jquery.dataTables.css')}" type="text/css"/> 
+    
+    <script src="http://maps.google.com/maps/api/js?sensor=false"/>    
   <g:javascript src="application.js" />
   <g:javascript src="jquery/js/jquery-1.8.3.js" />
   <g:javascript src="jquery/js/jquery-ui-1.9.2.custom.min.js"/>
@@ -33,7 +33,7 @@
   <g:javascript src="jquery.validate.min.js" />
   <g:javascript src="jquery.googleSuggest.js" />
   <g:javascript src="jquery.ui.addresspicker.js"/>
-  <g:javascript src="datatable/media/js/jquery.dataTables.min.js"/>
+  <g:javascript src="datatable/media/js/jquery.dataTables.min.js"/>  
 
   <style type="text/css">
     body {
