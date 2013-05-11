@@ -11,33 +11,26 @@ $(document).ready(function () {
 
 <div id="request-table">
   <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th></th>
-      </tr>
-    </thead>
     <tbody>
       <tr>
-        <td>Mark</td>
-        <td>Otto</td>
+        <td><img src="..." class="img-rounded"></td>
+        <td>Mark Otto</td>
         <td>
           <button class="btn btn-mini btn-primary" type="button">Accept</button>
           <button class="btn btn-mini btn-danger" type="button">Decline</button>
         </td>
       </tr>
       <tr>
-        <td>Jacob</td>
-        <td>Thornton</td>
+        <td><img src="..." class="img-rounded"></td>
+        <td>Jacob Thornton</td>
         <td>
           <button class="btn btn-mini btn-primary" type="button">Accept</button>
           <button class="btn btn-mini btn-danger" type="button">Decline</button>
         </td>
       </tr>
       <tr>
-        <td>Larry</td>
-        <td>the Bird</td>
+        <td><img src="..." class="img-rounded"></td>
+        <td>Larry the Bird</td>
         <td>
           <button class="btn btn-mini btn-primary" type="button">Accept</button>
           <button class="btn btn-mini btn-danger" type="button">Decline</button>
