@@ -40,7 +40,11 @@ class ProfileController {
     def login(){
     }
     
-    def connect() {
+    def showRequests(){
+        
+    }
+    
+    def connections() {
         
     }
     
