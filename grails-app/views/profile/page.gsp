@@ -252,8 +252,8 @@ $(document).ready(function() {
           </g:if>
           <g:else>
             <small><center>
-                <br/><g:if test="${profileInstance?.id == session?.user?.id}">You doesn't</g:if>
-                <g:else>${profileInstance?.firstName} doesn't </g:else> have any skills!
+                <br/><g:if test="${profileInstance?.id == session?.user?.id}">You don't</g:if>
+                <g:else>${profileInstance?.firstName} don't </g:else> have any skills!
               </center></small>
             <br/>
           </g:else>

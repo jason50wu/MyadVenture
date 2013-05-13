@@ -14,6 +14,8 @@ class Profile {
         boolean hasAvatar=0
 	boolean suspended = 0
 
+	static searchable = true
+
 	static hasMany = [connections:Profile, blogs:Blog, skillsets:Skillset, specializations:Specialization]
 
 	static constraints = {
@@ -32,5 +34,9 @@ class Profile {
 		specializations cascade: "all-delete-orphan"
                 connections cascade: "all-delete-orphan"
                 blogs cascade: "all-delete-orphan"
+	}
+
+	String toString(){ 
+	  "$firstName $lastName"
 	}
 }

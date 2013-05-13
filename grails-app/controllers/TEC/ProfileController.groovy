@@ -20,6 +20,21 @@ class ProfileController {
     def dataSource;
     static final String SERVER_PHOTO_THUMB_DIR="/home/jried/web-apps/pics/";
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+
+   def search() {
+     def searchResults = Skillset.search(params.q, params)
+     /* def specializationResults = Specialization.search(params.q, params)
+     if(searchResults.size() == 0){ 
+       searchResults = specializationResults;
+     }
+     else if(specializationResults.size() > 0){ 
+       searchResults = searchResults + specializationResults
+     }
+     */
+       
+       flash.message = "${searchResults.total} results found for search: \"${params.q}\""
+       return [searchResults:searchResults.results, resultCount:searchResults.total]
+    }
     
     def authenticate() {
         //Gets User object (if exists)

@@ -1,0 +1,18 @@
+.searchMessage{
+    color: #000099;
+    font-size: 16px;
+    left: 2em;
+}
+
+.oddRow{
+    background-color: #C8C8C8;
+}
+
+.evenRow{
+    background-color: #ffffff;
+}
+
+td.skillEntry{
+    font-size: 30px;
+    padding-left: 10px;
+}

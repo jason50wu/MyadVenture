@@ -26,7 +26,8 @@ class SpecializationController {
     
     def save() {
         def specializationInstance = new Specialization(params)
-        
+	specializationInstance.profile = Profile.get(session?.user?.id)
+
         if (!specializationInstance.save(flush: true)) {
             flash.message = message(code: 'default.not.created.message', args: ['Specialization'])
             if(specializationInstance?.type.equals("Personal"))

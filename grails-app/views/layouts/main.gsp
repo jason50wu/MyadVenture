@@ -79,6 +79,7 @@
           <!-- ONLY IF LOGGED IN -->
           <div class="nav-collapse collapse">
             <ul class="nav">
+	      <li>Search <g:render template="/layouts/search" /></li>
               <li><g:link controller="profile" action="page">My Profile</g:link></li>
               <li><a href="${createLink(controller: 'message', action: 'list')}">Messages</a></li>
               <li><a href="${createLink(controller: 'profile', action: 'generateIdeationCorner')}">Ideas</a></li>

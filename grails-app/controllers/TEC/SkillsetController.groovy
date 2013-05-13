@@ -25,6 +25,7 @@ class SkillsetController {
 
     def save() {
         def skillsetInstance = new Skillset(params)
+	skillsetInstance.profile = Profile.get(session?.user?.id)
         
         if (!skillsetInstance.save(flush: true)) {
             flash.message = message(code: 'default.not.created.message', args: [message(code: 'skillset.label', default: 'Skillset'), id])
