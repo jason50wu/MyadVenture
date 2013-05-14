@@ -13,6 +13,31 @@
 }
 
 td.skillEntry{
-    font-size: 30px;
-    padding-left: 10px;
+    font-size: 20px;
+    padding-left: 30px;
+    text-align: left;
 }
+
+.searchTable{
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 40px;
+}
+
+td.searchTable {
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+  font-size: 30px;
+  padding-left: 30px;
+  border-width: 30px;
+}
+
+.searchTable tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+

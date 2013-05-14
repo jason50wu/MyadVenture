@@ -12,38 +12,57 @@
     </g:if>
 
     <div class="body">
-      <div class="list">
-	<table>
+	<table id="searchTableId"class="table">
+	  <thead>
+	    <tr>
+	      <th> Name </th>
+	      <th> Skill </th>
+	      <th> Proficiency </th>
+	    </tr>
+	  </thead>
+	    
+	  <tbody>
         <g:each in="${searchResults}" status="i" var="entry">
-        <div class="${(i % 2) == 0 ? 'oddRow' : 'evenRow'}">
-	  <tr>
+	  <tr class="${(i % 2) == 0 ? 'oddRow' : 'evenRow'}">
 	    <td>
-	      <h3>
-            <g:link action="page" controller="Profile"
+	      <g:link action="page" controller="Profile"
           id="${entry.profileId}">
+	      <h3>
 	  <g:if test="${profileInstance?.hasAvatar}">
 	  <img src="${resource(dir: 'uploads', file:
-         "${entry.handle}.jpg")}" class="img-polaroid thumbnail" width="110px" height="110px"/>
+         "${entry.handle}.jpg")}" class="img-polaroid thumbnail" width="80px" height="80px"/>
               </g:if>
               <g:else>
 	  <img src="${resource(dir: 'uploads', file:
-          'no-pic-avatar.jpg')}" class="img-polaroid thumbnail" width="110px" height="110px"/>
+          'no-pic-avatar.jpg')}" class="img-polaroid thumbnail" width="80px" height="80px"/>
               </g:else>
 	      ${entry.profile.firstName} ${entry.profile.lastName}
 	      </h3>
 	    </td>
-	   <td class="skillEntry">
-          ${entry} </g:link>
-	  </td>
+	   <td>
+	     ${entry.name}
+	   </td>
+	   <td>
+	     ${entry.proficiency} 
+	   </td>
 	  </tr>
+	   </g:link>
         </div>
 	
         </g:each>
+	</tbody>
 	</table>
-      </div>
     </div>
     <div class="paginateButtons">
       <g:paginate total="${resultCount}" params="${flash}"/>
     </div>
   </body>
 </html>
+
+<g:javascript>
+  $(document).ready(function() {
+     $("#searchTableId").dataTable({
+      'iDisplayLength': 100
+     });
+  });
+</g:javascript>
